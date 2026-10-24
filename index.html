@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Red Book — Choose your edition</title>
+<meta name="description" content="The Red Book is a guided family information organizer with separate editions for India, the United States, the UK (England &amp; Wales) and Canada. Choose your edition.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Red Book — Choose your edition">
+<meta property="og:description" content="A guided family information organizer. Editions for India, the US, the UK (England &amp; Wales) and Canada.">
+<meta property="og:image" content="https://akshaysin.github.io/redbook-social-media/Pinterest/P13.png">
+<meta property="og:url" content="https://akshaysin.github.io/redbook-social-media/">
+<style>
+  :root {
+    --burgundy: #6e2233;
+    --burgundy-dark: #561a28;
+    --cream: #faf5ee;
+    --card: #ffffff;
+    --gold: #b08d57;
+    --ink: #3a2a2c;
+    --muted: #6b5a5c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font: 17px/1.55 Arial, Helvetica, sans-serif;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 40px 16px 56px; }
+  .eyebrow { letter-spacing: .14em; font-size: 13px; color: var(--burgundy); text-transform: uppercase; margin: 0; }
+  hr { border: 0; border-top: 1px solid var(--gold); width: 64px; margin: 14px 0 22px; }
+  h1 { font-family: Georgia, "Times New Roman", serif; font-weight: normal; color: var(--burgundy);
+       font-size: clamp(30px, 7vw, 42px); line-height: 1.15; margin: 0 0 14px; }
+  .lead { margin: 0 0 30px; color: var(--muted); }
+  h2 { font-family: Georgia, serif; font-weight: normal; font-size: 22px; color: var(--burgundy); margin: 0 0 4px; }
+  .editions { display: grid; gap: 14px; }
+  .edition { background: var(--card); border: 1px solid #eadfd2; border-radius: 10px; padding: 18px 18px 16px; }
+  .edition.suggested { border: 2px solid var(--gold); }
+  .tag { display: none; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+  .edition.suggested .tag { display: block; }
+  .note { margin: 0 0 12px; font-size: 15px; color: var(--muted); }
+  .buttons { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn { display: inline-block; text-decoration: none; background: var(--burgundy); color: #fff;
+         padding: 11px 18px; border-radius: 6px; font-size: 16px; }
+  .btn:hover, .btn:focus-visible { background: var(--burgundy-dark); }
+  .btn.secondary { background: transparent; color: var(--burgundy); border: 1px solid var(--burgundy); }
+  .btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+  footer { margin-top: 36px; font-size: 14px; color: var(--muted); }
+  footer a { color: var(--burgundy); }
+  .promise { font-family: Georgia, serif; font-style: italic; color: var(--burgundy); font-size: 19px; margin: 28px 0 0; }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">The Red Book</p>
+  <hr>
+  <h1>Choose your edition</h1>
+  <p class="lead">A guided family information organizer: who to call, where important papers are kept, and how to keep it all current. Each edition is written for its own country.</p>
+
+  <div class="editions">
+    <section class="edition" id="india" aria-labelledby="h-india">
+      <span class="tag">Suggested for you</span>
+      <h2 id="h-india">India</h2>
+      <p class="note">India edition, with FDs, mutual funds, EPF/PPF/NPS and nominee records.</p>
+      <div class="buttons">
+        <a class="btn" href="https://www.amazon.in/dp/B0HGYLS5KZ" rel="noopener">Amazon.in</a>
+        <a class="btn secondary" href="https://notionpress.com/in/read/the-red-book" rel="noopener">Notion Press</a>
+      </div>
+    </section>
+    <section class="edition" id="us" aria-labelledby="h-us">
+      <span class="tag">Suggested for you</span>
+      <h2 id="h-us">United States</h2>
+      <p class="note">United States edition.</p>
+      <div class="buttons"><a class="btn" href="https://www.amazon.com/dp/B0HLLRJ2DG" rel="noopener">Amazon.com</a></div>
+    </section>
+    <section class="edition" id="uk" aria-labelledby="h-uk">
+      <span class="tag">Suggested for you</span>
+      <h2 id="h-uk">United Kingdom</h2>
+      <p class="note">England &amp; Wales edition.</p>
+      <div class="buttons"><a class="btn" href="https://www.amazon.co.uk/dp/B0HMYB7DX6" rel="noopener">Amazon.co.uk</a></div>
+    </section>
+    <section class="edition" id="canada" aria-labelledby="h-canada">
+      <span class="tag">Suggested for you</span>
+      <h2 id="h-canada">Canada</h2>
+      <p class="note">English-language Canada edition.</p>
+      <div class="buttons"><a class="btn" href="https://www.amazon.ca/dp/B0HP25716F" rel="noopener">Amazon.ca</a></div>
+    </section>
+  </div>
+
+  <p class="promise">Leave them clarity.</p>
+  <footer>
+    <p>The Red Book helps you record what exists, where it's kept and who to contact. It doesn't create legal authority or replace professional advice.</p>
+    <p>Follow along on Instagram: <a href="https://www.instagram.com/theredbookplanner/" rel="noopener">@theredbookplanner</a></p>
+  </footer>
+</main>
+<script>
+  // Highlight the likely edition from the device time zone and move it to the top.
+  // Nothing is stored or sent anywhere.
+  (function () {
+    var tz = "";
+    try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) {}
+    var id = /^Asia\/(Kolkata|Calcutta)$/.test(tz) ? "india"
+           : /^Europe\/(London|Belfast)$/.test(tz) ? "uk"
+           : /^America\/(Toronto|Vancouver|Edmonton|Winnipeg|Halifax|St_Johns|Regina|Montreal)$/.test(tz) ? "canada"
+           : /^(America\/(New_York|Chicago|Denver|Los_Angeles|Phoenix|Anchorage|Detroit|Boise|Indiana\/.+)|Pacific\/Honolulu)$/.test(tz) ? "us"
+           : "";
+    var card = id && document.getElementById(id);
+    if (card) { card.classList.add("suggested"); card.parentNode.insertBefore(card, card.parentNode.firstChild); }
+  })();
+</script>
+</body>
+</html>
